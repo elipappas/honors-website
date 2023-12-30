@@ -19,7 +19,9 @@ export default function RootLayout({
       <body className="">
         <main className="bg-white min-h-screen">
           <div className="flex p-4 pl-16 w-full items-center bg-zinc-950">
-            <h1 className="text-4xl font-extrabold left-6 mr-8">Eli Pappas</h1> 
+            <Link href="/">
+              <h1 className="text-4xl font-extrabold left-6 mr-8">Eli Pappas</h1> 
+            </Link>
             <nav>
                 <ul className='flex space-x-4'>
                     {/* <Link href="/Home" className={`link ${pathname=== '/Home' ? 'underline underline-offset-4' : ''}`}><li className="mb-4 hover:underline underline-offset-4 text-left w-44 active:underline inline">Home</li></Link> */}
