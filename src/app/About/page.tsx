@@ -1,27 +1,36 @@
 export default function About() {
     return (
-        // start of about me page
-        <div className="m-auto w-1/2 flow-root dark:bg-gray-700 p-4 rounded-xl">
-            <h1 className="text-center text-lg font-bold"> About Me </h1>
-            <br></br>
-            <div className="m-auto w-full">
-                <div className="flex justify-center pr-8">
-                    <img className="w-96 rounded-3xl"src="/IMG_0118.JPG" width="100%"/>
+        // Start of About Me page
+        <div className="m-auto w-full max-w-3xl bg-opacity-50 bg-gray-700 p-6 shadow-lg">
+            
+            {/* Flex Container for Image and Text */}
+            <div className="flex justify-between items-center mb-6">
+                {/* Profile Image */}
+                <div className="flex-shrink-0">
+                    <img className="w-48 rounded-full" src="/FullSizeRender.jpeg" alt="Eli Pappas" />
+                </div>
+
+                {/* Text Section */}
+                <div className="text-white text-lg leading-relaxed ml-6">
+                    <h3 className="bg-white bg-opacity-10 w-fit">About Me</h3>
+                    <p className="text-base font-normal">
+                        Hi, I&apos;m Eli Pappas! I am a fourth-year Computer Science major at the University of Cincinnati. I am also pursuing a minor in mathematics and a Masters of Business Administration. 
+                        I am originally from Cincinnati and my interests include working with computers, reading, basketball, golf, lifting, and watching sports.
+                    </p>
+                    <br />
+                    <h3 className="bg-white bg-opacity-10 w-fit">Personal Goals</h3>
+                    <p className="text-base font-normal">
+                        I am hope to work for a tech company where I can develop new technologies and potentially participate in research and development or data analytics. My strengths include leadership, adaptability, and a constant drive for self-improvement, 
+                        which I aim to use to innovate and contribute to the advancement of new technologies.
+                        
+                    </p>
+                    <br />
+                    <h3 className="bg-white bg-opacity-10 w-fit">Honors Goals</h3>
+                    <p className="text-base font-normal">
+                        Through the honors program, I look forward to broadening my perspective and gaining unique experiences beyond what I have encountered before joining the UC Honors Program.
+                    </p>
                 </div>
             </div>
-            <br></br>
-            <div className="m-auto w-full">
-                <p className="text-center">
-                    Hi, I&apos;m Eli Pappas! 
-                    I am a third year Computer Science major at the University of Cincinnati. I am originally from Cincinnati, Ohio, and my interest include
-                    working with computers, reading, basketball, golf, lifting, and watching sports. In highschool, I played on the golf team as well as threw shotput 
-                    and discus. On top of my computer science major, I also am pursuing my minor in mathematics and my Master in Business Administration. 
-                    As for my professional goal, I hope to end up working for a tech company where I can develop new technologies. My strengths include leadership, 
-                    adaptability, and I am always looking to improve myself, and I hope to use these strengths in order to innovate and contribute to new technologies. 
-                    Through the honors program I am looking to broaden my scope of the world and get more unique experiences than what I have gotten so far from before 
-                    coming to the UC honors program.
-                </p>
-            </div>
         </div>
-    )
+    );
 }
