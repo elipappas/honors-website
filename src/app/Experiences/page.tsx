@@ -57,7 +57,7 @@ export default function HonorsExperience() {
               experience was spent on learning the basics of how to play the guitar, starting with simply hitting different notes and then moving onto chords and chord
               progressions. After getting the basics, I began learning short snippets of songs, like the intro to Hotel California in the video below. For the piano, I
               started to learn a new song and tried to get as far in as I could in the little time in which I had access to a piano. I started by brushing up on some songs
-              I already knew, but I then moved on to learning Moonlight Sonata's first movement which I also have a video of below. This experience was very beneficial to me,
+              I already knew, but I then moved on to learning Moonlight Sonata&apos;s first movement which I also have a video of below. This experience was very beneficial to me,
               allowing me to find a good activity for my free time outside of computers and technology. It has also helped me to work on some of my bad tendencies and soft
               skills by getting more experience learning new skills and getting a deeper level understanding of a topic.
             </p>
