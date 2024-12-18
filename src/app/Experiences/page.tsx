@@ -15,7 +15,7 @@ export default function HonorsExperience() {
           onClick={() => setIsSwiftCollapsed(!isSwiftCollapsed)}
           className="font-extrabold text-xl"
         >
-          <h1 className='w-full flex items-center bg-white bg-opacity-10'> Swift Learning Experience <span className='ml-2'>{isSwiftCollapsed ? <FaChevronDown /> : <FaChevronUp />}</span></h1>
+          <h1 className='w-full flex items-center bg-white bg-opacity-10'> Swift Learning Experience <span className='ml-2'>{isSwiftCollapsed ? <FaChevronUp /> : <FaChevronDown />}</span></h1>
         </button>
         {!isSwiftCollapsed && (
           <div>
@@ -48,7 +48,7 @@ export default function HonorsExperience() {
           onClick={() => setIsMusicCollapsed(!isMusicCollapsed)}
           className="font-extrabold text-xl"
         >
-            <h1 className='w-full flex items-center bg-white bg-opacity-10'> Musical Instrument Experience <span className='ml-2'>{isMusicCollapsed ? <FaChevronDown /> : <FaChevronUp />}</span></h1>
+            <h1 className='w-full flex items-center bg-white bg-opacity-10'> Musical Instrument Experience <span className='ml-2'>{isMusicCollapsed ? <FaChevronUp /> : <FaChevronDown />}</span></h1>
         </button>
         {!isMusicCollapsed && (
           <div>
@@ -83,7 +83,7 @@ export default function HonorsExperience() {
             onClick={() => setIsWebsiteCollapsed(!isWebsiteCollapsed)}
             className="font-extrabold text-xl"
           >
-              <h1 className='w-full flex items-center bg-white bg-opacity-10'> Honors Website Experience <span className='ml-2'>{isMusicCollapsed ? <FaChevronDown /> : <FaChevronUp />}</span></h1>
+              <h1 className='w-full flex items-center bg-white bg-opacity-10'> Honors Website Experience <span className='ml-2'>{isMusicCollapsed ? <FaChevronUp /> : <FaChevronDown />}</span></h1>
           </button>
           {!isWebsiteCollapsed && (
           <div>

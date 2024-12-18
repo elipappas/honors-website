@@ -11,7 +11,7 @@ export default function YIR() {
     return (
         <div className="m-auto w-full flow-root  bg-opacity-50 bg-gray-700 p-4">
             <button onClick={() => setIsFirstCollapsed(!isFirstCollapsed)} className="font-extrabold">
-            <h1 className="font-extrabold w-full flex items-center bg-white bg-opacity-10 text-xl"> 2021-2022 <span className='ml-2'>{isFirstCollapsed ? <FaChevronDown /> : <FaChevronUp />}</span></h1>
+            <h1 className="font-extrabold w-full flex items-center bg-white bg-opacity-10 text-xl"> 2021-2022 <span className='ml-2'>{isFirstCollapsed ? <FaChevronUp /> : <FaChevronDown />}</span></h1>
             </button>
             {!isFirstCollapsed && (
             <p className="font-normal">
@@ -34,7 +34,7 @@ export default function YIR() {
             <br></br>
             <br></br>
             <button onClick={() => setIsSecondCollapsed(!isSecondCollapsed)} className="font-extrabold">
-            <h1 className="font-extrabold w-full flex items-center bg-white bg-opacity-10 text-xl"> 2022-2023 <span className='ml-2'>{isSecondCollapsed ? <FaChevronDown /> : <FaChevronUp />}</span></h1>
+            <h1 className="font-extrabold w-full flex items-center bg-white bg-opacity-10 text-xl"> 2022-2023 <span className='ml-2'>{isSecondCollapsed ? <FaChevronUp /> : <FaChevronDown />}</span></h1>
             </button>
             {!isSecondCollapsed && (
             <p className="font-normal">
@@ -56,7 +56,7 @@ export default function YIR() {
             <br></br>
             <br></br>
             <button onClick={() => setIsThirdCollapsed(!isThirdCollapsed)} className="font-extrabold">
-            <h1 className="font-extrabold w-full flex items-center bg-white bg-opacity-10 text-xl"> 2023-2024 <span className='ml-2'>{isThirdCollapsed ? <FaChevronDown /> : <FaChevronUp />}</span></h1>
+            <h1 className="font-extrabold w-full flex items-center bg-white bg-opacity-10 text-xl"> 2023-2024 <span className='ml-2'>{isThirdCollapsed ? <FaChevronUp /> : <FaChevronDown />}</span></h1>
             </button>
             {!isThirdCollapsed && (
             <p className="font-normal">
