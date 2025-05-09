@@ -78,7 +78,7 @@ export default function YIR() {
             <br></br>
             <br></br>
             <button onClick={() => setIsFourthCollapsed(!isFourthCollapsed)} className="font-extrabold">
-            <h1 className="font-extrabold w-full flex items-center bg-white bg-opacity-10 text-xl"> 2024-2025 <span className='ml-2'>{isThirdCollapsed ? <FaChevronUp /> : <FaChevronDown />}</span></h1>
+            <h1 className="font-extrabold w-full flex items-center bg-white bg-opacity-10 text-xl"> 2024-2025 <span className='ml-2'>{isFourthCollapsed ? <FaChevronUp /> : <FaChevronDown />}</span></h1>
             </button>
             {!isFourthCollapsed && (
             <p className="font-normal">
