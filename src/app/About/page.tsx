@@ -1,7 +1,7 @@
 export default function About() {
     return (
         // Start of About Me page
-        <div className="m-auto w-full max-w-3xl bg-opacity-50 bg-gray-700 p-6 shadow-lg">
+        <div className="m-auto w-full max-w-3xl bg-opacity-70 bg-gray-700 p-6 shadow-lg">
             
             {/* Flex Container for Image and Text */}
             <div className="flex justify-between items-center mb-6">

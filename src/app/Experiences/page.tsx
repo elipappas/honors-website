@@ -8,7 +8,7 @@ export default function HonorsExperience() {
   const [isWebsiteCollapsed, setIsWebsiteCollapsed] = useState(false);
 
   return (
-    <div className="m-auto w-full flow-root bg-opacity-50 bg-gray-700 p-4">
+    <div className="m-auto w-full flow-root bg-opacity-70 bg-gray-700 p-4">
       {/* First Section */}
       <div>
         <button

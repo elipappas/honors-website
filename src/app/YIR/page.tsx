@@ -7,9 +7,10 @@ export default function YIR() {
     const [isFirstCollapsed, setIsFirstCollapsed] = useState(false);
     const [isSecondCollapsed, setIsSecondCollapsed] = useState(false);
     const [isThirdCollapsed, setIsThirdCollapsed] = useState(false);
+    const [isFourthCollapsed, setIsFourthCollapsed] = useState(false);
 
     return (
-        <div className="m-auto w-full flow-root  bg-opacity-50 bg-gray-700 p-4">
+        <div className="m-auto w-full flow-root  bg-opacity-70 bg-gray-700 p-4">
             <button onClick={() => setIsFirstCollapsed(!isFirstCollapsed)} className="font-extrabold">
             <h1 className="font-extrabold w-full flex items-center bg-white bg-opacity-10 text-xl"> 2021-2022 <span className='ml-2'>{isFirstCollapsed ? <FaChevronUp /> : <FaChevronDown />}</span></h1>
             </button>
@@ -73,6 +74,26 @@ export default function YIR() {
                 “full timer” work and hopefully land a full time job at Siemens when I graduate. On top of all of that, I am trying my best to learn even more outside of work and the classroom and expand 
                 my skill-set broad enough that I can have other job options which differ significantly in the experience category that my co-op rotations, which has been a tough juggling act. I luckily 
                 have found some friends in my classes and work that I can use to hold me accountable and raise the bar for my goals as well as be a resource that I can use for what to learn and where to learn it from.
+            </p>)}
+            <br></br>
+            <br></br>
+            <button onClick={() => setIsFourthCollapsed(!isFourthCollapsed)} className="font-extrabold">
+            <h1 className="font-extrabold w-full flex items-center bg-white bg-opacity-10 text-xl"> 2024-2025 <span className='ml-2'>{isThirdCollapsed ? <FaChevronUp /> : <FaChevronDown />}</span></h1>
+            </button>
+            {!isFourthCollapsed && (
+            <p className="font-normal">
+                This last year has been another year of personal growth but specifically surrounding a few specific experiences I&apos;ve had. My honors experience this year was one where I decided to recreate my honors 
+                website in order to make it more professional, but also in order to give me the opportunity to expand my resume and gain experience in web development. I think this experience&apos;s reasoning is really 
+                indicative of how I&apos;m trying to grow myself this year and about the upcoming transition I&apos;ve been trying to prepare myself for this year. This experience was the start of me getting ready to graduate 
+                and really trying to gain some experience in the fields which I would like to get careers in and co-op job applications have showed me how lacking that&apos;s been, so using these honors experiences to grow 
+                myself academically and professionally has been really important to me and really helpful to help me have a reason to go out and learn more and grow. My next planned experience is in machine learning which 
+                is heavily related to the career path which I want to pursue in data analytics and data science. I&apos;ve had a hard time trying to get internships in data science so far, as all of my job experience so far is 
+                unrelated to the field, so adding these experiences to my resume and my GitHub with other coding projects will be really helpful for me. Also learning more about machine learning generally will be helpful just 
+                to make me more tech literate so I&apos;m able to talk to people at career fairs or in interviews so they know that I know what I&apos;m talking about. For this next year I have a lot of expectations I&apos;ve placed on myself of 
+                places where I want to grow. First of academically I would like to finish strong in my last few computer science classes and I would like to get the. most possible out of my electives as well as the most out of my 
+                capstone project where I will be developing a project. I also would like to keep my grades up for my MBA as well and try to learn as much as I can from those classes so I can diversify myself. Finally, I really want 
+                to mature and grow as a person. With graduation looming, I feel like I really need to take time to grow in getting out and doing activities on my own, because they won&apos;t come to me anymore like they have in college, 
+                so I would like to learn how to balance the rest after work to get out and have fun portions of my life and I think this summer is a great place to do that throughout my final co-op rotation.
             </p>)}
         </div>
     )
