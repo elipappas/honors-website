@@ -6,6 +6,7 @@ export default function HonorsExperience() {
   const [isSwiftCollapsed, setIsSwiftCollapsed] = useState(false);
   const [isMusicCollapsed, setIsMusicCollapsed] = useState(false);
   const [isWebsiteCollapsed, setIsWebsiteCollapsed] = useState(false);
+  const [isMLCollapsed, setIsMLCollapsed] = useState(false);
 
   return (
     <div className="m-auto w-full flow-root bg-opacity-70 bg-gray-700 p-4">
@@ -101,6 +102,32 @@ export default function HonorsExperience() {
             <br />
             <p className="text-white text-opacity-30">below is a link to where I keep my code for this project</p>
             <p>github - <span><a href="https://github.com/elipappas/honors-website" className="text-blue-500">https://github.com/elipappas/honors-website</a></span></p>
+          </div>
+        )}
+      </div>
+      {/* Divider */}
+      <br />
+      {/* Fourth Section */}
+      <div>
+        <button
+            onClick={() => setIsMLCollapsed(!isMLCollapsed)}
+            className="font-extrabold text-xl"
+          >
+              <h1 className='w-full flex items-center bg-white bg-opacity-10'> Machine Learning Experience <span className='ml-2'>{isMLCollapsed ? <FaChevronUp /> : <FaChevronDown />}</span></h1>
+          </button>
+          {!isMLCollapsed && (
+          <div>
+            <p className="font-normal">
+              This experience involved me learning about machine learning and creating a project to showcase my knowledge. I started by researching different machine learning algorithms and techniques,
+              focusing on binary classification. I then decided to create a fire detection binary classifier using Python and popular libraries such as TensorFlow and Keras.
+              I collected a dataset of images containing fire and non-fire scenarios, preprocessed the data, and built a convolutional neural network (CNN) to classify the images.
+              Throughout this experience, I learned about data preprocessing, model architecture design, training and evaluation of machine learning models, and hyperparameter tuning.
+              This experience was incredibly valuable as it allowed me to apply theoretical knowledge in a practical setting, enhancing my understanding of machine learning concepts.
+              Additionally, it has sparked my interest in pursuing further studies and projects in the field of artificial intelligence and machine learning.
+            </p>
+            <br />
+            <p className="text-white text-opacity-30">below is a link to where I keep my code for this project</p>
+            <p>github for project - <span><a href="https://github.com/elipappas/Fire-Detection-Binary-Classifier" className="text-blue-500">https://github.com/elipappas/Fire-Detection-Binary-Classifier</a></span></p>
           </div>
         )}
       </div>
