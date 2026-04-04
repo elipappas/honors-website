@@ -1,15 +1,52 @@
 "use client";
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
+import * as XLSX from 'xlsx';
 export default function HonorsExperience() {
   const [isSwiftCollapsed, setIsSwiftCollapsed] = useState(false);
   const [isMusicCollapsed, setIsMusicCollapsed] = useState(false);
   const [isWebsiteCollapsed, setIsWebsiteCollapsed] = useState(false);
   const [isMLCollapsed, setIsMLCollapsed] = useState(false);
+  const [isGymCollapsed, setIsGymCollapsed] = useState(false);
+  const [excelSheets, setExcelSheets] = useState<{ [key: string]: any[] }>({});
+
+  useEffect(() => {
+    const loadExcelFile = async () => {
+      try {
+        console.log('Attempting to fetch Excel file...');
+        const response = await fetch('/gym/spring_2026_gym_tracking.xlsx');
+        console.log('Response status:', response.status);
+        if (!response.ok) {
+          throw new Error(`Failed to fetch: ${response.statusText}`);
+        }
+        const arrayBuffer = await response.arrayBuffer();
+        console.log('File loaded, buffer size:', arrayBuffer.byteLength);
+        const workbook = XLSX.read(arrayBuffer, { type: 'array' });
+        console.log('Sheet names:', workbook.SheetNames);
+        
+        const sheets: { [key: string]: any[] } = {};
+        
+        // Load all sheets
+        for (const sheetName of workbook.SheetNames) {
+          const worksheet = workbook.Sheets[sheetName];
+          const jsonData = XLSX.utils.sheet_to_json(worksheet);
+          sheets[sheetName] = jsonData;
+          console.log(`Sheet "${sheetName}": ${jsonData.length} rows`);
+        }
+        
+        console.log('All sheets loaded:', Object.keys(sheets));
+        setExcelSheets(sheets);
+      } catch (error) {
+        console.error('Error loading Excel file:', error);
+        console.error('Stack:', error instanceof Error ? error.stack : 'N/A');
+      }
+    };
+    loadExcelFile();
+  }, []);
 
   return (
-    <div className="m-auto w-full flow-root bg-opacity-70 bg-gray-700 p-4">
+    <div className="m-auto w-full flow-root bg-opacity-70 bg-gray-700 p-4 text-white">
       {/* First Section */}
       <div>
         <button
@@ -84,7 +121,7 @@ export default function HonorsExperience() {
             onClick={() => setIsWebsiteCollapsed(!isWebsiteCollapsed)}
             className="font-extrabold text-xl"
           >
-              <h1 className='w-full flex items-center bg-white bg-opacity-10'> Honors Website Experience <span className='ml-2'>{isMusicCollapsed ? <FaChevronUp /> : <FaChevronDown />}</span></h1>
+              <h1 className='w-full flex items-center bg-white bg-opacity-10'> Honors Website Experience <span className='ml-2'>{isWebsiteCollapsed ? <FaChevronUp /> : <FaChevronDown />}</span></h1>
           </button>
           {!isWebsiteCollapsed && (
           <div>
@@ -128,6 +165,62 @@ export default function HonorsExperience() {
             <br />
             <p className="text-white text-opacity-30">below is a link to where I keep my code for this project</p>
             <p>github for project - <span><a href="https://github.com/elipappas/Fire-Detection-Binary-Classifier" className="text-blue-500">https://github.com/elipappas/Fire-Detection-Binary-Classifier</a></span></p>
+          </div>
+        )}
+      </div>
+      {/* Divider */}
+      <br />
+      {/* Fifth Section */}
+      <div>
+        <button
+            onClick={() => setIsGymCollapsed(!isGymCollapsed)}
+            className="font-extrabold text-xl"
+          >
+              <h1 className='w-full flex items-center bg-white bg-opacity-10'> Gym Tracking Experience <span className='ml-2'>{isGymCollapsed ? <FaChevronUp /> : <FaChevronDown />}</span></h1>
+          </button>
+          {!isGymCollapsed && (
+          <div>
+            <p className="font-normal">
+              This experience involved me tracking my workouts at the gym and using that information to improve my weights
+              and overall fitness. I started by creating a spreadsheet to log my workouts, including the exercises I performed, 
+              the weights I used, and the number of sets and reps.I then analyzed this data to identify trends and areas for 
+              improvement. For example, I noticed that I wasn't able to hit a certain rep count for a specific exercise, which 
+              prompted me to lower weights to get a better lift. Additionally, I used this data to set goals for myself and 
+              track my progress over time. This experience was valuable as it allowed me to take a more systematic approach 
+              to my fitness journey and provided me with insights that helped me improve my workouts and overall health.
+            </p>
+            <br />
+            {Object.keys(excelSheets).length > 0 && (
+              <div>
+                {Object.entries(excelSheets).map(([sheetName, data]) => (
+                  <div key={sheetName} className="mb-6">
+                    <h3 className="text-lg font-bold mb-2">{sheetName}</h3>
+                    {data.length > 0 && (
+                      <div className="overflow-x-auto">
+                        <table className="w-full border-collapse border border-white">
+                          <thead>
+                            <tr className="bg-white bg-opacity-10">
+                              {Object.keys(data[0]).map((key) => (
+                                <th key={key} className="border border-white p-2 text-left text-sm">{key}</th>
+                              ))}
+                            </tr>
+                          </thead>
+                          <tbody>
+                            {data.map((row, idx) => (
+                              <tr key={idx}>
+                                {Object.values(row).map((val, i) => (
+                                  <td key={i} className="border border-white p-2 text-sm">{String(val)}</td>
+                                ))}
+                              </tr>
+                            ))}
+                          </tbody>
+                        </table>
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
         )}
       </div>
