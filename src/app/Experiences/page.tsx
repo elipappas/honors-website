@@ -184,7 +184,7 @@ export default function HonorsExperience() {
               This experience involved me tracking my workouts at the gym and using that information to improve my weights
               and overall fitness. I started by creating a spreadsheet to log my workouts, including the exercises I performed, 
               the weights I used, and the number of sets and reps.I then analyzed this data to identify trends and areas for 
-              improvement. For example, I noticed that I wasn't able to hit a certain rep count for a specific exercise, which 
+              improvement. For example, I noticed that I wasn&apos;t able to hit a certain rep count for a specific exercise, which 
               prompted me to lower weights to get a better lift. Additionally, I used this data to set goals for myself and 
               track my progress over time. This experience was valuable as it allowed me to take a more systematic approach 
               to my fitness journey and provided me with insights that helped me improve my workouts and overall health.
